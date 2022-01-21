@@ -8,10 +8,6 @@ const main = async () => {
     // wait for it to be mined
     await (await nftContract.makeNFT()).wait();
     console.log("Minted Nft #1")
-    
-    // mint another
-    await (await nftContract.makeNFT()).wait();
-    console.log("Minted NFT #2")
 };
 
 const runMain = async () => {

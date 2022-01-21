@@ -14,6 +14,10 @@ import {Base64} from "./libraries/Base64.sol";
 // MyNft contract have access to the inherited contract's methods
 contract MyNFT is ERC721URIStorage{
 
+    // event 
+    event NewNFTMinted(address sender, uint256 tokenId);
+
+
     // OpenZeppelin to help us keep track of tokenIds
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
@@ -100,5 +104,7 @@ contract MyNFT is ERC721URIStorage{
 
         //Increment the counter for when the next NFT is minted
         _tokenIds.increment();
+
+        emit NewNFTMinted(msg.sender, newItemId);
     }
 }

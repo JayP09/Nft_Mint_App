@@ -10,7 +10,7 @@ import MyNFT from "./artifacts/contracts/MyNFT.sol/MyNFT.json";
 const TWITTER_HANDLE = "JayPanchalTwts";
 const CONTRACT_ADDRESS = "0xc2fb5158d3A88701f49AFfA8bfb6348C71a7f0D4";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const OPENSEA_LINK = `https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}`;
+const OPENSEA_LINK = "https://testnets.opensea.io/collection/epic-nft-thctfwexms";
 const TOTAL_MINT_COUNT = 100;
 const RARIBLE_LINK = `https://rinkeby.rarible.com/collection/${CONTRACT_ADDRESS}`
 
@@ -189,18 +189,24 @@ const App = () => {
         </div>
         <div style={{marginTop:"80px"}}>
             <button
-              href={OPENSEA_LINK}
               className="cta-button connect-wallet-button"
             >
-              OpenSea
+              <a
+              href={OPENSEA_LINK}
+              >
+                OpenSea
+              </a>
             </button>
         </div>
         <div style={{marginTop:"20px"}}>
             <button
-              href={RARIBLE_LINK}
               className="cta-button connect-wallet-button"
             >
+              <a
+              href={RARIBLE_LINK}
+              >
               Rarible
+              </a>
             </button>
         </div>
         <div className="footer-container">
